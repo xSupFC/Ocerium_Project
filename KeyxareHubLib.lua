@@ -289,7 +289,7 @@ function UILibrary.Main(PrjName,HideKey)
 		end)
 	end
 	
-	function Tabs.Nofitication(Text)
+	function Tabs:Nofitication(Text)
 
 
 		local Nofitication = Instance.new("Frame")
@@ -575,7 +575,7 @@ function UILibrary.Main(PrjName,HideKey)
 
 			local InSection = {}
 
-			function InSection.NewToggle(ToggleText,UserFunc,defbool)
+			function InSection:Toggle(ToggleText,UserFunc,defbool)
 
 				local Toggle = Instance.new("TextButton")
 				local ToggleLabel = Instance.new("TextLabel")
@@ -693,7 +693,7 @@ function UILibrary.Main(PrjName,HideKey)
 				return Toggle;
 			end
 
-			function InSection.NewLabel(LabelText,IsScaled,LabelTextSize,LabelTextColor)
+			function InSection:Label(LabelText,IsScaled,LabelTextSize,LabelTextColor)
 				local Label = Instance.new("TextLabel")
 
 				Label.Name = LabelText
@@ -713,7 +713,7 @@ function UILibrary.Main(PrjName,HideKey)
 				return Label;
 			end
 
-			function InSection.NewLabelWithComment(LabelText,CommentText,IsScaled,LabelTextSize,LabelTextColor)
+			function InSection:LabelWithComment(LabelText,CommentText,IsScaled,LabelTextSize,LabelTextColor)
 				local Label = Instance.new("TextLabel")
 				local DateMes = Instance.new("TextLabel")
 
@@ -748,7 +748,7 @@ function UILibrary.Main(PrjName,HideKey)
 				return Label;
 			end
 
-			function InSection.NewSlider(SliderText,min,max,precise,UserFunc,defvalue)
+			function InSection:Slider(SliderText,min,max,precise,UserFunc,defvalue)
 
 				local Slider = Instance.new("TextButton")
 				local Frame = Instance.new("Frame")
@@ -934,7 +934,7 @@ function UILibrary.Main(PrjName,HideKey)
 			end
 
 
-			function InSection.NewDropdown(placeholder,Selectables,func,IsMulti)
+			function InSection:Dropdown(placeholder,Selectables,func,IsMulti)
 				local Dropdown = Instance.new("TextButton")
 				local Frame = Instance.new("Frame")
 				local DropdownCorner = Instance.new("UICorner")
@@ -1270,7 +1270,7 @@ function UILibrary.Main(PrjName,HideKey)
 				end
 				return Drop;
 			end
-			function InSection.NewButton(btnText,func)
+			function InSection:Button(btnText,func)
 
 				local Button = Instance.new("TextButton")
 				local SecFrame = Instance.new("Frame")
